@@ -82,7 +82,6 @@ exports.bookinstance_create_post = [
         errors: errors.array(),
         bookinstance: bookInstance,
       });
-      return;
     } else {
       // Data from form is valid
       await bookInstance.save();

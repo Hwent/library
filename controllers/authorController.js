@@ -131,7 +131,6 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
       author: author,
       author_books: allBooksByAuthor,
     });
-    return;
   } else {
     // Author has no books. Delete object and redirect to the list of authors.
     await Author.findByIdAndDelete(req.body.authorid);
