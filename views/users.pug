@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+    if user
+        p Welcome, #{user.username}!
+        a(href='/users/logout') Log out
+    else
+        p Please log in or sign up to continue.
+        a(href='/users/login') Log in
+
+
